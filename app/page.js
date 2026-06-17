@@ -1,19 +1,20 @@
-import Header from "./components/header/header";
+
 import HeroCarousel from "./components/carousel/Herocarousel";
 import About from "./components/aboutSection/about";
+import Products from "./components/productSec/product";
+import WhyChooseUs from "./components/whyChooseUsSec/whyChooseUs";
 import Clients from "./components/clients/clients";
-import Footer from "./components/footer/footer";
+
 
 
 export default function Home() {
   return (
-    <div>
-      <Header/>
+    <div>      
       <HeroCarousel/>
       <About/>
-      Welcome To Matrix Power Homepage
-      <Clients/>
-      <Footer/>
+      <Products/>
+      <WhyChooseUs/>
+      <Clients/>      
     </div>
   );
 }
