@@ -107,7 +107,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" >
             
-              <img className={styles.logo} src="/images/matrix-logo.png" width={190} height={90} alt='Matrix logo'/>
+              <img className={styles.logo} src="/images/logo.png" width={190} height={90} alt='Matrix logo'/>
             
             
           </Link>
