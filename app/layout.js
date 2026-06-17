@@ -4,6 +4,8 @@ import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import FloatingButtons from "./components/floatButtons/floatButtons";      
 import "bootstrap-icons/font/bootstrap-icons.css";
+import 'animate.css';
+import AOSProvider from "./components/aos/AOSProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +30,7 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
       <Header/>
+      <AOSProvider/>
       {children}
       <Footer/>
       <FloatingButtons/>

@@ -22,7 +22,7 @@ export default function Clients() {
 
   return (
     <section className={styles.clients} aria-labelledby="clients-heading">
-      <div className={styles.header}>
+      <div className={styles.header} data-aos="fade-up">
         <span className={styles.eyebrow}>Trusted nationwide</span>
         <h2 id="clients-heading" className={styles.heading}>
           Trusted by industry leaders across India

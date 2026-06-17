@@ -113,8 +113,8 @@ export default function Products() {
 
   return (
     <section className={styles.products} aria-labelledby="products-heading">
-      <div className={styles.header}>
-        <div className={styles.headerText}>
+      <div className={styles.header} >
+        <div className={styles.headerText} data-aos="fade-up">
           <span className={styles.eyebrow}>What we build</span>
           <h2 id="products-heading" className={styles.heading}>
             Electrical control panels engineered for every application
@@ -159,7 +159,7 @@ export default function Products() {
         onPointerLeave={stopDragging}
         role="list"
         aria-label="Product catalogue"
-      >
+      data-aos="fade-up">
         {PRODUCTS.map((product) => (
           <Link
             href={product.slug}

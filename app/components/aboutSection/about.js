@@ -37,10 +37,10 @@ const HIGHLIGHTS = [
 export default function About() {
   return (
     <section className={styles.about} aria-labelledby="about-heading">
-      <div className={styles.inner}>
+      <div className={styles.inner} >
         {/* ── Left: image collage ── */}
         <div className={styles.visual}>
-          <div className={styles.imageMain}>
+        <div className={styles.imageMain} data-aos="fade-right">
             <Image
               src="/images/factory-main.png"
               alt="Matrix Power manufacturing facility floor"
@@ -48,8 +48,9 @@ export default function About() {
               sizes="(max-width: 900px) 90vw, 480px"
               className={styles.img}
             />
+          
           </div>
-          <div className={styles.imageSecondary}>
+          <div className={styles.imageSecondary} data-aos="fade-up">
             <Image
               src="/images/about2.png"
               alt="Close-up of an assembled electrical control panel"
@@ -58,8 +59,8 @@ export default function About() {
               className={styles.img}
             />
           </div>
-          <div className={styles.experienceBadge}>
-            <span className={styles.badgeNumber}>20+</span>
+          <div className={styles.experienceBadge} data-aos="fade-up">
+            <span className={styles.badgeNumber}>15+</span>
             <span className={styles.badgeLabel}>
               Years of<br />excellence
             </span>
@@ -67,7 +68,7 @@ export default function About() {
         </div>
 
         {/* ── Right: content ── */}
-        <div className={styles.content}>
+        <div className={styles.content} data-aos="fade-up">
           <span className={styles.eyebrow}>About Matrix Power</span>
           <h2 id="about-heading" className={styles.heading}>
             Engineering reliable power control, panel by panel
@@ -111,9 +112,9 @@ export default function About() {
 
       {/* ── Stats strip ── */}
       <div className={styles.statsStrip}>
-        <div className={styles.statsInner}>
+        <div className={styles.statsInner} >
           {STATS.map((stat, i) => (
-            <div key={stat.label} className={styles.statItem}>
+            <div key={stat.label} className={styles.statItem} data-aos="fade-up">
               <span className={styles.statValue}>{stat.value}</span>
               <span className={styles.statLabel}>{stat.label}</span>
               {i < STATS.length - 1 && <span className={styles.statDivider} aria-hidden="true" />}
