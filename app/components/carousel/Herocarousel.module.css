@@ -1,0 +1,399 @@
+/* ────────────────────────────────────────────────
+   Matrix Power — Hero Carousel
+   Reuses brand palette: #0A0F1E navy, #E8520A orange,
+   #F8F9FA text, #64748B muted
+──────────────────────────────────────────────── */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  overflow: hidden;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+
+.slideStack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* === SLIDE === */
+.slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease;
+  pointer-events: none;
+}
+
+.slideActive {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.slideBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.slideImg {
+  object-fit: cover;
+  transform: scale(1.08);
+  transition: transform 7s ease-out;
+}
+
+.slideActive .slideImg {
+  transform: scale(1);
+}
+
+.slideOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(100deg, rgba(8, 11, 22, 0.92) 0%, rgba(8, 11, 22, 0.78) 38%, rgba(8, 11, 22, 0.35) 65%, rgba(8, 11, 22, 0.55) 100%),
+    linear-gradient(0deg, rgba(6, 9, 18, 0.6) 0%, rgba(6, 9, 18, 0) 35%);
+}
+
+.slideContent {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 4rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #E8520A;
+  margin-bottom: 1.1rem;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s ease 0.25s, transform 0.6s ease 0.25s;
+}
+
+.eyebrow::before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #E8520A;
+  border-radius: 2px;
+}
+
+.slideActive .eyebrow {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #F8F9FA;
+  max-width: 680px;
+  margin-bottom: 1.1rem;
+  letter-spacing: -0.01em;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease 0.35s, transform 0.6s ease 0.35s;
+}
+
+.slideActive .title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #94A3B8;
+  max-width: 560px;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease 0.45s, transform 0.6s ease 0.45s;
+}
+
+.slideActive .desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease 0.55s, transform 0.6s ease 0.55s;
+}
+
+.slideActive .actions {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ctaPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background: #E8520A;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(232, 82, 10, 0.4);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+
+.ctaPrimary svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s;
+}
+
+.ctaPrimary:hover {
+  background: #d04608;
+  box-shadow: 0 8px 26px rgba(232, 82, 10, 0.55);
+  transform: translateY(-1px);
+}
+
+.ctaPrimary:hover svg {
+  transform: translateX(3px);
+}
+
+.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #CBD5E1;
+  border: 1px solid rgba(203, 213, 225, 0.25);
+  border-radius: 8px;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+
+.ctaSecondary:hover {
+  color: #F8F9FA;
+  border-color: rgba(248, 249, 250, 0.45);
+  background: rgba(248, 249, 250, 0.06);
+}
+
+/* === ARROWS === */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(248, 249, 250, 0.18);
+  background: rgba(10, 15, 30, 0.4);
+  color: #F8F9FA;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+}
+
+.arrow svg {
+  width: 18px;
+  height: 18px;
+}
+
+.arrow:hover {
+  border-color: #E8520A;
+  background: rgba(232, 82, 10, 0.18);
+  transform: translateY(-50%) scale(1.06);
+}
+
+/* === DOTS / PROGRESS === */
+.controls {
+  position: absolute;
+  bottom: 1.75rem;
+  left: 4rem;
+  right: 4rem;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.dot {
+  position: relative;
+  width: 48px;
+  height: 4px;
+  border-radius: 4px;
+  background: rgba(248, 249, 250, 0.18);
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.dot:hover {
+  background: rgba(248, 249, 250, 0.32);
+}
+
+.dotActive {
+  background: rgba(248, 249, 250, 0.18);
+}
+
+.dotProgress {
+  position: absolute;
+  inset: 0;
+  width: 0%;
+  background: #E8520A;
+  border-radius: 4px;
+  animation-name: fillBar;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fillBar {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+/* === COUNTER === */
+.counter {
+  position: absolute;
+  top: 2rem;
+  right: 4rem;
+  z-index: 3;
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  color: #64748B;
+  font-weight: 500;
+}
+
+.counterActive {
+  font-size: 1.1rem;
+  color: #F8F9FA;
+  font-weight: 700;
+}
+
+.counterDivider {
+  color: #475569;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .hero {
+    height: 520px;
+  }
+
+  .slideContent {
+    padding: 0 2rem;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .controls,
+  .counter {
+    left: 2rem;
+    right: 2rem;
+  }
+
+  .counter {
+    right: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    height: 600px;
+  }
+
+  .slideContent {
+    padding: 0 1.25rem;
+  }
+
+  .title {
+    font-size: 1.65rem;
+  }
+
+  .desc {
+    font-size: 0.9rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .ctaPrimary,
+  .ctaSecondary {
+    justify-content: center;
+  }
+
+  .arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .arrow svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .controls {
+    left: 1.25rem;
+    right: 1.25rem;
+    bottom: 1.25rem;
+  }
+
+  .counter {
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide,
+  .slideImg,
+  .eyebrow,
+  .title,
+  .desc,
+  .actions {
+    transition: opacity 0.3s ease;
+    transform: none;
+  }
+
+  .dotProgress {
+    animation: none;
+  }
+}

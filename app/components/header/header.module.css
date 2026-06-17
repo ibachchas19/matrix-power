@@ -1,0 +1,537 @@
+/* ────────────────────────────────────────────────
+   Matrix Power — Header Styles
+   Palette:
+     Charcoal  #1A1A2E   (top bar bg)
+     Orange    #E8520A   (brand accent)
+     Deep navy #0F172A   (main bar bg)
+     Off-white #F8F9FA   (text on dark)
+     Muted     #94A3B8   (secondary text)
+     Gold ring #F5A623   (CTA hover ring)
+──────────────────────────────────────────────── */
+
+/* === HEADER SHELL === */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  transition: box-shadow 0.3s ease;
+}
+
+.scrolled {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+}
+
+/* === TOP UTILITY BAR === */
+.topBar {
+  background: #1A1A2E;
+  border-bottom: 1px solid rgba(232, 82, 10, 0.25);
+}
+
+.topBarInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.topBarLeft {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.topBarLink {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: #94A3B8;
+  text-decoration: none;
+  transition: color 0.2s;
+  letter-spacing: 0.02em;
+}
+
+.topBarLink:hover {
+  color: #E8520A;
+}
+
+.topBarLink .icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+.topBarRight {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.topBarTag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #E8520A;
+  padding: 2px 10px;
+  border: 1px solid rgba(232, 82, 10, 0.4);
+  border-radius: 100px;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  color: #64748B;
+  transition: color 0.2s, background 0.2s;
+}
+
+.socialLink:hover {
+  color: #E8520A;
+  background: rgba(232, 82, 10, 0.1);
+}
+
+.socialLink svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* === MAIN NAV BAR === */
+.mainBar {
+  background: #0F172A;
+  border-bottom: 2px solid #E8520A;
+}
+
+.mainBarInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  height: 68px;
+}
+
+/* === LOGO === */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logoMark svg {
+  width: 44px;
+  height: 44px;
+  display: block;
+  filter: drop-shadow(0 0 8px rgba(232, 82, 10, 0.4));
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logoName {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #F8F9FA;
+  text-transform: uppercase;
+}
+
+.logoSub {
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #64748B;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+/* === DESKTOP NAV === */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.navItemWrap {
+  position: relative;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #CBD5E1;
+  text-decoration: none;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+  position: relative;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 80%;
+  height: 2px;
+  background: #E8520A;
+  border-radius: 2px;
+  transition: transform 0.25s ease;
+}
+
+.navLink:hover {
+  color: #F8F9FA;
+  background: rgba(248, 249, 250, 0.06);
+}
+
+.navLink:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.navItemActive .navLink {
+  color: #E8520A;
+}
+
+.chevron {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.navItemActive .chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-4px);
+  min-width: 210px;
+  background: #0F172A;
+  border: 1px solid rgba(232, 82, 10, 0.25);
+  border-radius: 10px;
+  padding: 0.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+.navItemWrap:hover .dropdown,
+.navItemActive .dropdown {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.85rem;
+  color: #94A3B8;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: color 0.15s, background 0.15s;
+}
+
+.dropdownItem:hover {
+  color: #F8F9FA;
+  background: rgba(232, 82, 10, 0.12);
+}
+
+.dropdownDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #E8520A;
+  flex-shrink: 0;
+  opacity: 0.6;
+  transition: opacity 0.15s;
+}
+
+.dropdownItem:hover .dropdownDot {
+  opacity: 1;
+}
+
+/* === CTA AREA === */
+.ctaWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.callChip {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #94A3B8;
+  text-decoration: none;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 100px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.callChip svg {
+  width: 14px;
+  height: 14px;
+}
+
+.callChip:hover {
+  color: #F8F9FA;
+  border-color: rgba(248, 249, 250, 0.35);
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.3rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: #fff;
+  background: #E8520A;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(232, 82, 10, 0.4);
+}
+
+.ctaBtn:hover {
+  background: #d04608;
+  box-shadow: 0 6px 20px rgba(232, 82, 10, 0.55);
+  transform: translateY(-1px);
+}
+
+.ctaBtn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(232, 82, 10, 0.3);
+}
+
+/* === HAMBURGER === */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0;
+  transition: border-color 0.2s;
+  flex-shrink: 0;
+}
+
+.hamburger:hover {
+  border-color: #E8520A;
+}
+
+.bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #CBD5E1;
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+  transform-origin: center;
+}
+
+.barTop {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.barMid {
+  opacity: 0;
+}
+
+.barBot {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* === MOBILE DRAWER === */
+.mobileMenu {
+  background: #0F172A;
+  border-top: 1px solid rgba(232, 82, 10, 0.2);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobileMenuOpen {
+  max-height: 600px;
+}
+
+.mobileNav {
+  padding: 1rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.mobileGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #CBD5E1;
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: color 0.2s;
+  text-align: left;
+}
+
+.mobileLink:hover {
+  color: #E8520A;
+}
+
+.mobileChevron {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.25s;
+}
+
+.mobileChevronOpen {
+  transform: rotate(180deg);
+}
+
+.mobileSubMenu {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.mobileSubLink {
+  display: block;
+  padding: 0.55rem 0.5rem;
+  font-size: 0.875rem;
+  color: #64748B;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  transition: color 0.2s;
+}
+
+.mobileSubLink:hover {
+  color: #E8520A;
+}
+
+.mobileCta {
+  margin-top: 1rem;
+}
+
+.mobileCta .ctaBtn {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .topBarLeft .topBarLink:last-child {
+    display: none;
+  }
+
+  .topBarTag {
+    display: none;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .callChip {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .ctaBtn {
+    padding: 0.45rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .topBar {
+    display: none;
+  }
+
+  .mainBarInner {
+    height: 60px;
+    padding: 0 1rem;
+  }
+
+  .logoName {
+    font-size: 1.1rem;
+  }
+
+  .logoSub {
+    display: none;
+  }
+
+  .logoMark svg {
+    width: 38px;
+    height: 38px;
+  }
+}

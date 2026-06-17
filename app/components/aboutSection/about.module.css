@@ -1,0 +1,367 @@
+/* ────────────────────────────────────────────────
+   Matrix Power — About Section
+   Light surface for content contrast against the
+   dark header/hero/footer. Orange #E8520A accent.
+──────────────────────────────────────────────── */
+
+.about {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  background: #F8F9FA;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem 4rem;
+  display: grid;
+  grid-template-columns: 0.95fr 1.15fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* === VISUAL / IMAGE COLLAGE === */
+.visual {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+.imageMain {
+  position: relative;
+  grid-column: 1 / 3;
+  aspect-ratio: 4 / 3.1;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 48px -12px rgba(15, 23, 42, 0.18);
+}
+
+.imageSecondary {
+  position: relative;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  width: 78%;
+  aspect-ratio: 4 / 3.4;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-top: -3.5rem;
+  margin-left: 1.25rem;
+  border: 5px solid #F8F9FA;
+  box-shadow: 0 16px 32px -10px rgba(15, 23, 42, 0.2);
+  z-index: 2;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.experienceBadge {
+  position: absolute;
+  bottom: 0;
+  right: 0.5rem;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 116px;
+  height: 116px;
+  border-radius: 50%;
+  background: #E8520A;
+  box-shadow: 0 14px 28px -8px rgba(232, 82, 10, 0.55);
+  text-align: center;
+}
+
+.badgeNumber {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+
+.badgeLabel {
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
+  margin-top: 0.3rem;
+  line-height: 1.3;
+}
+
+/* === CONTENT === */
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #E8520A;
+  margin-bottom: 0.9rem;
+}
+
+.eyebrow::before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #E8520A;
+  border-radius: 2px;
+}
+
+.heading {
+  font-size: 2.1rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #0F172A;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.1rem;
+  max-width: 560px;
+}
+
+.lead {
+  font-size: 1.02rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 0.9rem;
+}
+
+.body {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: #64748B;
+  margin-bottom: 2.25rem;
+  max-width: 580px;
+}
+
+/* === HIGHLIGHTS GRID === */
+.highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 1.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.highlightIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(232, 82, 10, 0.1);
+  color: #E8520A;
+  flex-shrink: 0;
+}
+
+.highlightIcon svg {
+  width: 19px;
+  height: 19px;
+}
+
+.highlightTitle {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+}
+
+.highlightDesc {
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: #64748B;
+}
+
+/* === ACTIONS === */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ctaPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: #fff;
+  background: #E8520A;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(232, 82, 10, 0.35);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+
+.ctaPrimary svg {
+  width: 15px;
+  height: 15px;
+  transition: transform 0.2s;
+}
+
+.ctaPrimary:hover {
+  background: #d04608;
+  box-shadow: 0 8px 22px rgba(232, 82, 10, 0.45);
+  transform: translateY(-1px);
+}
+
+.ctaPrimary:hover svg {
+  transform: translateX(3px);
+}
+
+.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #0F172A;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 8px;
+  transition: border-color 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+
+.ctaSecondary:hover {
+  border-color: #E8520A;
+  background: rgba(232, 82, 10, 0.05);
+}
+
+/* === STATS STRIP === */
+.statsStrip {
+  background: #0F172A;
+  border-top: 2px solid #E8520A;
+}
+
+.statsInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.statItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.statValue {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #F8F9FA;
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #94A3B8;
+  letter-spacing: 0.02em;
+}
+
+.statDivider {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 48px;
+  background: rgba(248, 249, 250, 0.12);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 4rem 1.5rem 3rem;
+  }
+
+  .visual {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .heading {
+    font-size: 1.85rem;
+    max-width: 100%;
+  }
+
+  .statsInner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 0;
+  }
+
+  .statItem:nth-child(2)::after {
+    display: none;
+  }
+
+  .statDivider {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .highlights {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ctaPrimary,
+  .ctaSecondary {
+    justify-content: center;
+  }
+
+  .experienceBadge {
+    width: 92px;
+    height: 92px;
+    right: 0;
+  }
+
+  .badgeNumber {
+    font-size: 1.3rem;
+  }
+
+  .badgeLabel {
+    font-size: 0.58rem;
+  }
+
+  .statValue {
+    font-size: 1.7rem;
+  }
+
+  .statsInner {
+    padding: 2rem 1.25rem;
+  }
+}
