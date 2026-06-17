@@ -115,7 +115,7 @@ export default function HeroCarousel() {
               <div className={styles.slideOverlay} aria-hidden="true" />
             </div>
 
-            <div className={styles.slideContent}>
+            <div className={styles.slideContent} data-aos="fade-up">
               <span className={styles.eyebrow}>{slide.eyebrow}</span>
               <h1 className={styles.title}>{slide.title}</h1>
               <p className={styles.desc}>{slide.desc}</p>

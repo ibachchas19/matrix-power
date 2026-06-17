@@ -42,7 +42,7 @@ export default function WhyChooseUs() {
     <section className={styles.section} aria-labelledby="why-heading">
       <div className={styles.inner}>
         <div className={styles.visual}>
-          <div className={styles.imageFrame}>
+          <div className={styles.imageFrame} data-aos="fade-right">
             <Image
               src="/images/53023.jpg"
               alt="Engineer inspecting a Matrix Power control panel"
@@ -52,7 +52,7 @@ export default function WhyChooseUs() {
             />
           </div>
 
-          <div className={styles.floatingCard}>
+          <div className={styles.floatingCard} data-aos="fade-up">
             <span className={styles.floatingIconWrap} aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                 <path d="M12 3l8 4v5c0 5-3.5 8.5-8 9.5-4.5-1-8-4.5-8-9.5V7l8-4z" />
@@ -66,7 +66,7 @@ export default function WhyChooseUs() {
           </div>
         </div>
 
-        <div className={styles.content}>
+        <div className={styles.content} data-aos="fade-up">
           <span className={styles.eyebrow}>Why choose us</span>
           <h2 id="why-heading" className={styles.heading}>
             Built on precision, backed by experience

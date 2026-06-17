@@ -38,7 +38,7 @@ export default function Footer() {
 
       {/* ── CTA strip ── */}
       <div className={styles.ctaStrip}>
-        <div className={styles.ctaStripInner}>
+        <div className={styles.ctaStripInner} data-aos="fade-up">
           <div className={styles.ctaStripText}>
             <h2 className={styles.ctaHeading}>
               Ready to power your project?
@@ -209,15 +209,15 @@ Established in the year 2011 at Sonipat, Haryana.We “Matrix Power & Automation
           <p className={styles.copyright}>
             © {new Date().getFullYear()} Matrix Power. All rights reserved.
           </p>
-          <div className={styles.bottomLinks}>
+          {/* <div className={styles.bottomLinks}>
             <Link href="/privacy-policy" className={styles.bottomLink}>Privacy Policy</Link>
             <span className={styles.bottomDivider} aria-hidden="true">·</span>
             <Link href="/terms" className={styles.bottomLink}>Terms of Use</Link>
             <span className={styles.bottomDivider} aria-hidden="true">·</span>
             <Link href="/sitemap" className={styles.bottomLink}>Sitemap</Link>
-          </div>
+          </div> */}
           <p className={styles.madeWith}>
-            Designed &amp; Developed with <span className={styles.heart}>♥</span> in India
+            Designed &amp; Developed By <Link href='https://www.keywordindia.com/' target="_blank" className={styles.bottomLink}>Keyword India Network Pvt. Ltd.</Link>
           </p>
         </div>
       </div>
