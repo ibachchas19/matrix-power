@@ -68,7 +68,7 @@ export default function Footer() {
           {/* Col 1 — Brand */}
           <div className={styles.brandCol}>
             <Link href="/" className={styles.logo}>              
-                <Image src="/images/matrix-logo.png" width={190} height={90} alt='Matrix logo'/>
+                <Image src="/images/footer-logo.png" width={190} height={90} alt='Matrix logo'/>
             </Link>
             <p className={styles.brandDesc}>
 Established in the year 2011 at Sonipat, Haryana.We “Matrix Power & Automation " engaged as the foremost Manufacturer and Service Provider of Control Panel, Drive Panel, Chiller Panel and many more.
