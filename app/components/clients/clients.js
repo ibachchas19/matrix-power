@@ -4,17 +4,17 @@ import Image from 'next/image';
 import styles from './clients.module.css';
 
 const CLIENTS = [
-  { name: 'Tata Steel', logo: '/images/clients/1.png' },
-  { name: 'Larsen & Toubro', logo: '/images/clients/2.png' },
-  { name: 'Reliance Industries', logo: '/images/clients/3.png' },
-  { name: 'Adani Power', logo: '/images/clients/4.png' },
-  { name: 'Bajaj Electricals', logo: '/images/clients/5.png' },
-  { name: 'JSW Steel', logo: '/images/clients/6.png' },
-  { name: 'Siemens', logo: '/images/clients/7.png' },
-  { name: 'Thermax', logo: '/images/clients/8.png' },
-  { name: 'Godrej', logo: '/images/clients/9.png' },
-  { name: 'Mahindra', logo: '/images/clients/10.png' },
-  { name: 'Mahindra', logo: '/images/clients/11.png' },
+  { name: 'Client 1', logo: '/images/clients/1.png' },
+  { name: 'Client 2', logo: '/images/clients/2.png' },
+  { name: 'Client 3', logo: '/images/clients/3.png' },
+  { name: 'Client 4', logo: '/images/clients/4.png' },
+  { name: 'Client 5', logo: '/images/clients/5.png' },
+  { name: 'Client 6', logo: '/images/clients/6.png' },
+  { name: 'Client 7', logo: '/images/clients/7.png' },
+  { name: 'Client 8', logo: '/images/clients/8.png' },
+  { name: 'Client 9', logo: '/images/clients/9.png' },
+  { name: 'Client 10', logo: '/images/clients/10.png' },
+  { name: 'Client 11', logo: '/images/clients/11.png' },
 ];
 
 export default function Clients() {
