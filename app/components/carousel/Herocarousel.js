@@ -37,7 +37,7 @@ const SLIDES = [
     ctaHref: '/services',
     secondaryLabel: 'Contact Us',
     secondaryHref: '/contact',
-    image: '/images/Slide-3a.png',
+    image: '/images/slide-3a.png',
   },
     {
     id: 4,
@@ -48,7 +48,7 @@ const SLIDES = [
     ctaHref: '/services',
     secondaryLabel: 'Request a Consultation',
     secondaryHref: '/contact',
-    image: '/images/Slide-4.png',
+    image: '/images/slide-4.png',
   },
 ];
 
