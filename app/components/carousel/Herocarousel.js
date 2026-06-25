@@ -8,14 +8,14 @@ import styles from './Herocarousel.module.css';
 const SLIDES = [
   {
     id: 1,
-    eyebrow: 'Engineered for Industry',
-    title: 'Powering Industries with Reliable Electrical Control Panels',
-    desc: 'From APFC Panels and Distribution Panels to Drive Panels, PLC Panels, and PLC & SCADA Automation Systems, Matrix Power designs and manufactures robust electrical solutions that ensure efficiency, safety, and uninterrupted operations across diverse industries.',
+    eyebrow: 'Engineered for Reliable Power Distribution',
+    title: 'Advanced LT Panels for Safe & Efficient Electrical Control',
+    desc: 'Matrix Power manufactures high-performance LT Panels designed for dependable power distribution, protection, and control. Built with premium components and precision engineering, our panels ensure operational safety, energy efficiency, and uninterrupted performance across industrial, commercial, and infrastructure projects.',
     ctaLabel: 'Explore Products',
     ctaHref: '/products',
     secondaryLabel: 'Get a Quote',
     secondaryHref: '/contact',
-    image: '/images/slide-1.png',
+    image: '/images/slide-1a.png',
   },
   {
     id: 2,
@@ -30,14 +30,25 @@ const SLIDES = [
   },
   {
     id: 3,
-    eyebrow: 'Pan-India Service',
-    title: 'Complete Support from Design to Commissioning',
-    desc: 'Our experienced engineering team offers end-to-end services including system design, panel fabrication, programming, testing, installation, commissioning, and after-sales support, delivering dependable solutions to customers across India.',
+    eyebrow: 'Driving Industrial Automation Excellence',
+    title: 'Reliable PLC, SCADA & Control System Integration',
+    desc: 'We provide complete automation services—from system architecture and software development to panel assembly, installation, testing, and commissioning. Our team ensures smooth deployment and long-term support for efficient and intelligent industrial operations.',
     ctaLabel: 'Our Services',
     ctaHref: '/services',
     secondaryLabel: 'Contact Us',
     secondaryHref: '/contact',
-    image: '/images/Slide-3.png',
+    image: '/images/Slide-3a.png',
+  },
+    {
+    id: 4,
+    eyebrow: 'End-to-End Turnkey Industrial Solutions',
+    title: 'From Concept to Commissioning — We Deliver Complete Project Execution',
+    desc: 'Matrix Power provides comprehensive turnkey solutions covering electrical systems, automation, PLC & SCADA integration, panel manufacturing, installation, testing, and commissioning. Our expert team ensures seamless execution, reduced project timelines, and reliable performance from start to finish.',
+    ctaLabel: 'Explore Solutions',
+    ctaHref: '/services',
+    secondaryLabel: 'Request a Consultation',
+    secondaryHref: '/contact',
+    image: '/images/Slide-4.png',
   },
 ];
 

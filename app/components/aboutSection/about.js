@@ -50,7 +50,7 @@ export default function About() {
             />
           
           </div>
-          <div className={styles.imageSecondary} data-aos="fade-up">
+          {/* <div className={styles.imageSecondary} data-aos="fade-up">
             <Image
               src="/images/about2.png"
               alt="Close-up of an assembled electrical control panel"
@@ -58,7 +58,7 @@ export default function About() {
               sizes="(max-width: 900px) 60vw, 260px"
               className={styles.img}
             />
-          </div>
+          </div> */}
           <div className={styles.experienceBadge} data-aos="fade-up">
             <span className={styles.badgeNumber}>15+</span>
             <span className={styles.badgeLabel}>
